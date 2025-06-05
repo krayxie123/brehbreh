@@ -48,11 +48,6 @@
       border-radius: 10px;
     }
 
-    .assignment-title {
-      font-weight: bold;
-      font-size: 18px;
-    }
-
     .assignment-detail {
       margin: 8px 0;
     }
@@ -62,7 +57,6 @@
       color: white;
       padding: 5px 10px;
       border-radius: 5px;
-      display: inline-block;
       font-weight: bold;
     }
 
@@ -95,12 +89,31 @@
       border-bottom: 2px solid white;
       padding-bottom: 5px;
     }
+
+    input[type="text"] {
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .add-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #006dae;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div class="navbar">
     <span>Monash University</span>
-    <span></span>
+    <span>Kai</span>
   </div>
 
   <div class="nav-tabs">
@@ -110,22 +123,32 @@
     <span>UPDATES</span>
   </div>
 
-  <div class="container">
+  <div class="container" id="dashboard">
     <div class="assignment-box">
-      <div class="assignment-title">
-        FIT3163: FINAL - Team contribution (Project Proposal including background research summary)
-      </div>
-      <div class="assignment-detail"><strong>Due date:</strong> 11.55pm, Monday 9 June 2025</div>
-      <div class="assignment-detail"><strong>Status:</strong> <span class="status-badge">Not submitted</span></div>
-      <div class="assignment-detail"><strong>Type:</strong> Assignment</div>
-    </div>
-
-    <div class="date-header">Monday 9 June</div>
-    <div class="day-box">
-      <div><strong>Due at 11.55pm</strong></div>
-      <div>FIT3163: Project Proposal including background research summary (40%)</div>
-      <div style="color: #e67300; font-weight: bold;">Not submitted</div>
+      <input type="text" placeholder="Unit and Task Title" value="FIT3163: FINAL - Team contribution (Project Proposal including background research summary)">
+      <input type="text" placeholder="Due Date" value="11.55pm, Monday 9 June 2025">
+      <input type="text" placeholder="Status" value="Not submitted">
+      <input type="text" placeholder="Type" value="Assignment">
     </div>
   </div>
+
+  <div style="text-align:center;">
+    <button class="add-button" onclick="addAssignment()">+ Add Another Task</button>
+  </div>
+
+  <script>
+    function addAssignment() {
+      const dashboard = document.getElementById('dashboard');
+      const box = document.createElement('div');
+      box.className = 'assignment-box';
+      box.innerHTML = `
+        <input type="text" placeholder="Unit and Task Title" value="">
+        <input type="text" placeholder="Due Date" value="">
+        <input type="text" placeholder="Status" value="">
+        <input type="text" placeholder="Type" value="">
+      `;
+      dashboard.appendChild(box);
+    }
+  </script>
 </body>
 </html>
