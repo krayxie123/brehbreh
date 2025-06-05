@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monash my.WES Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #003366;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #00274d;
+      font-weight: bold;
+    }
+
+    .navbar span {
+      color: white;
+    }
+
+    .container {
+      background-color: white;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 30px;
+      margin-top: 20px;
+      color: #003366;
+    }
+
+    .section-header {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .assignment-box {
+      background-color: #f1f5fa;
+      border-left: 5px solid #ffc1b3;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .assignment-title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .assignment-detail {
+      margin: 8px 0;
+    }
+
+    .status-badge {
+      background-color: #ff9900;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .date-header {
+      font-size: 16px;
+      color: #00274d;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .day-box {
+      margin-top: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #e8f0fe;
+      color: #003366;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .nav-tabs span {
+      cursor: pointer;
+      color: white;
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <span>Monash University</span>
+    <span></span>
+  </div>
+
+  <div class="nav-tabs">
+    <span>FOR YOU</span>
+    <span><strong>UPCOMING</strong></span>
+    <span>SCHEDULE</span>
+    <span>UPDATES</span>
+  </div>
+
+  <div class="container">
+    <div class="assignment-box">
+      <div class="assignment-title">
+        FIT3163: FINAL - Team contribution (Project Proposal including background research summary)
+      </div>
+      <div class="assignment-detail"><strong>Due date:</strong> 11.55pm, Monday 9 June 2025</div>
+      <div class="assignment-detail"><strong>Status:</strong> <span class="status-badge">Not submitted</span></div>
+      <div class="assignment-detail"><strong>Type:</strong> Assignment</div>
+    </div>
+
+    <div class="date-header">Monday 9 June</div>
+    <div class="day-box">
+      <div><strong>Due at 11.55pm</strong></div>
+      <div>FIT3163: Project Proposal including background research summary (40%)</div>
+      <div style="color: #e67300; font-weight: bold;">Not submitted</div>
+    </div>
+  </div>
+</body>
+</html>
